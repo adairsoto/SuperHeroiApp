@@ -1,0 +1,10 @@
+Eu desenvolvi a aplicação usando a abordagem Code First do Entity Framework pois possibilita a 
+manipulação de dados de bancos relacionais de uma forma simplificada, permitindo que o desenvolvimento
+seja mais focado nas regras de negócio. 
+
+Usei DTOs e Mapper para abstrair a camada de domínio e retornar somente as propriedades necessárias. 
+
+Para o desenvolvimento do front-end eu usei ReactJs pois é uma biblioteca poderosa, que possui várias 
+funcionalidades e que não tem as restrições de um framework, sendo mais flexível para solução de problemas. 
+
+Para consumo da API usei Axios, ele simplifica o uso de operações HTTP além de fazer conversão em JSON de forma automática.
