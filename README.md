@@ -5,4 +5,4 @@ através de operações CRUD (Create, Read, Update, Delete).
 
 A API foi desenvolvida com .Net Core 6.0 usando Entity Framework para trabalhar com o banco de dados SQL Server.
 
-O front-end foi desenvolvido com ReactJS, usando Axios para consumir a API.
+O front-end foi desenvolvido com ReactJS, usando Axios para consumir a API e Tostify para notificações.
