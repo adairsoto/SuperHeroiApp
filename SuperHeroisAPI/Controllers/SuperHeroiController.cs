@@ -91,7 +91,7 @@ namespace SuperHeroisAPI.Controllers
         public async Task<ActionResult> UpdateSuperHero(int id, HeroiDto heroiDto)
         {
             if (id != heroiDto.Id)
-                return BadRequest("Herói não encontrado.");
+                return NotFound("Herói não encontrado.");
 
             var checkNomeHeroi = _context.Herois.Where(hero => hero.NomeHeroi == heroiDto.NomeHeroi && hero.Id != heroiDto.Id).FirstOrDefault();
 
@@ -119,7 +119,7 @@ namespace SuperHeroisAPI.Controllers
         {
             var heroi = await _context.Herois.FindAsync(id);
             if (heroi == null)
-                return BadRequest("Herói não encontrado.");
+                return NotFound("Herói não encontrado.");
 
             _context.Herois.Remove(heroi);
 
