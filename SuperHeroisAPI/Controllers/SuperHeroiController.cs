@@ -23,10 +23,11 @@ namespace SuperHeroisAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Heroi>>> GetSuperHerois()
         {
-            if (_context.Herois == null)
+            var herois = await _context.Herois.ToListAsync();
+
+            if (herois.Count == 0)
                 return NotFound("A lista de heróis está vazia!");
 
-            var herois = await _context.Herois.ToListAsync();
             var heroisDto = _mapper.Map<List<HeroiDto>>(herois);
             return Ok(heroisDto);
         }
@@ -45,10 +46,12 @@ namespace SuperHeroisAPI.Controllers
         [HttpGet("superPoderes")]
         public async Task<ActionResult<List<SuperPoderes>>> GetSuperPoderes()
         {
-            if (_context.SuperPoderes == null)
+            var superPoderes = await _context.SuperPoderes.ToListAsync();
+
+            if (superPoderes.Count == 0)
                 return NotFound("A lista de super poderes está vazia!");
 
-            return Ok(await _context.SuperPoderes.ToListAsync());
+            return Ok(superPoderes);
         }
 
         [HttpPost]
@@ -90,7 +93,7 @@ namespace SuperHeroisAPI.Controllers
             if (id != heroiDto.Id)
                 return BadRequest("Herói não encontrado.");
 
-            var checkNomeHeroi = _context.Herois.Where(hero => hero.NomeHeroi == heroiDto.NomeHeroi).FirstOrDefault();
+            var checkNomeHeroi = _context.Herois.Where(hero => hero.NomeHeroi == heroiDto.NomeHeroi && hero.Id != heroiDto.Id).FirstOrDefault();
 
             if (checkNomeHeroi != null)
                 return BadRequest("Esse herói já está cadastrado!");

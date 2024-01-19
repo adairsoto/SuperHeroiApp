@@ -68,3 +68,4 @@ C:\Users\adair\OneDrive\Documents\Learning\SuperHerois\SuperHeroisAPI\obj\Debug\
 C:\Users\adair\OneDrive\Documents\Learning\SuperHerois\SuperHeroisAPI\obj\Debug\net6.0\ref\SuperHeroisAPI.dll
 C:\Users\adair\OneDrive\Documents\Learning\SuperHerois\SuperHeroisAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\adair\OneDrive\Documents\Learning\SuperHerois\SuperHeroisAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\adair\OneDrive\Documents\Learning\SuperHerois\SuperHeroisAPI\obj\Debug\net6.0\SuperHeroisAPI.sourcelink.json

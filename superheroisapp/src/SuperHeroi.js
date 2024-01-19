@@ -138,7 +138,7 @@ const SuperHeroi = () => {
       dataNascimento: dataNascimento,
       altura: altura,
       peso: peso,
-      superPoderesIds: [1, 2],
+      superPoderesIds: [],
     };
 
     axios
@@ -233,6 +233,7 @@ const SuperHeroi = () => {
               <Form.Group as={Col} md="6" controlId="validationNome">
                 <Form.Label>Nome</Form.Label>
                 <Form.Control
+                  maxLength={120}
                   required
                   type="text"
                   placeholder="Nome"
@@ -246,6 +247,7 @@ const SuperHeroi = () => {
               <Form.Group as={Col} md="6" controlId="validationNomeHeroi">
                 <Form.Label>Nome do herói</Form.Label>
                 <Form.Control
+                  maxLength={120}
                   required
                   type="text"
                   placeholder="Nome do herói"
